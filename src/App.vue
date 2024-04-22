@@ -35,8 +35,6 @@ export default {
   box-sizing: border-box;
 }
 body {
-  min-height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
