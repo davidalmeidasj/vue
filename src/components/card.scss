@@ -1,0 +1,91 @@
+.card{
+  $card-bg-clr: #fff;
+  $text-main-clr: #000;
+  $text-sec-clr: #9E9EA2;
+
+  width: max(300px, 40vw);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background-color: $card-bg-clr;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    &__profile-img{
+      width: 40%;
+
+      & img{
+        max-width: 100%;
+        border-radius: 100%;
+      }
+    }
+
+    &__profile-content{
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      gap: 12px;
+
+      & .profile-occupation{
+        color: $text-sec-clr;
+        font-size: clamp(1rem , 3vw , 2.5rem);
+      }
+
+      & .profile-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: clamp(.8rem , 2vw , 1.5rem);
+        gap: 8px;
+
+        & div{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 6px;
+
+          & span{
+            color: $text-sec-clr;
+          }
+        }
+      }
+    }
+
+  }
+
+  &-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    & .divider{
+      width: 80%;
+      height: 4px;
+      background-color: $text-sec-clr;
+      border: none;
+      border-radius: 2px;
+    }
+
+    & .profile-email{
+      color: $text-sec-clr;
+      font-size: clamp(.8rem , 2vw , 1.5rem);
+    }
+  }
+}

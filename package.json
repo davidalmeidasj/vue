@@ -9,7 +9,11 @@
     "node": "18.x"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
     "core-js": "^3.30.2",
+    "vanilla-tilt": "^1.8.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {

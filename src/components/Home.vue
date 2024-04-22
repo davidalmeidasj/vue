@@ -1,35 +1,30 @@
 <template>
   <div class="container">
-    <div class="bubble-text text">{{ msg }}</div>
+    <Card
+        :profile-img-url="Avatar"
+        profile-name="David Almeida"
+        profile-address="Foz do Iguaçu - Centro - Brazil"
+        profile-occupation="Dev Front-end"
+        profile-number="(21) 9 99115-8960"
+        profile-email="davidasj21@gmail.com"
+    />
   </div>
 </template>
 
 <script>
+import Card from "./Card";
+import Avatar from '../assets/avatar.png';
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'HomeComponent',
+  components: {
+    Card
   },
-  mounted() {
-    this.splitTextIntoSpans('.bubble-text');
+  data() {
+    return {
+      Avatar
+    };
   },
-  methods: {
-    splitTextIntoSpans(target) {
-      let elements = document.querySelectorAll(target);
-      elements.forEach((element) => {
-        element.classList.add('split-text');
-        let text = element.innerText;
-        element.innerHTML = text
-            .split(" ")
-            .map(function (word) {
-              let char = word.split('').map(char => `<span class="split-char">${char}</span>`).join('');
-              return `<div class="split-word">${char}&nbsp;</div>`;
-            }).join('');
-      });
-    }
-  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" src="./home.scss"></style>
